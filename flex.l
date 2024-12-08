@@ -3,6 +3,7 @@
 #include "y.tab.h" 
     int nbLigne=1;
 %}
+
 %%
 [a-zA-Z_][a-zA-Z0-9_]*  { return IDF; }
 
@@ -28,7 +29,7 @@
 ";"                     {return PVG; }
 "FIXE"                  {return FIXE; }
 "="                     {return EQL; }
-"<-"                    {returnt AFF; }
+"<-"                    {return AFF; }
 "SI"                      {return SI; }
 "("                      {return L_PARENTHESIS; }
 ")"                      {return R_PARENTHESIS; }
@@ -53,7 +54,12 @@
 .               { printf("Unknown character: %s\n", yytext); }
 %%
 
+
 int main(){
     yylex();
     return 0;
+}
+
+int yywrap() {
+    return 1;
 }
