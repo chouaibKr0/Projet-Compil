@@ -50,9 +50,9 @@
 ">="                      {return SUP_EG; }
 "affiche"                      {return AFFICHE; }
 "lire"                      {return LIRE; }
-
 .               { printf("Unknown character: %s\n", yytext); }
 %%
+
 int main(){
     yylex();
     return 0;
