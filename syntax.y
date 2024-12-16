@@ -1,5 +1,6 @@
 %{
     #include <stdio.h>
+    #include <stdlib.h>
 %}
 
 %token mc_debut mc_execution start_block end_block mc_fin
