@@ -18,6 +18,7 @@ FIN             { return fin; }
 [ \t]           { /* Ignore white space */ }
 [\n]            { nbLigne++; }
 "--".*?"##"             { /* Ignore single-line comments */ }
+NUM                   { return t_num;}
 REAL                  { return t_real; }
 TEXT                  { return t_text; }
 [+\-]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)                        { return real;}
