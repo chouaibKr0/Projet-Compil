@@ -17,6 +17,7 @@ FIN             { return mc_fin; }
 
 [ \t]           { /* Ignore white space */ }
 [\n]            { nbLigne++; }
-
+"{"-.*"-}"              { /* Ignore multi-line comments */ }
+"--".*?"##"             { /* Ignore single-line comments */ }
 .               { printf("Erreur lexical %d: %s\n", nbLigne, yytext); }
 
