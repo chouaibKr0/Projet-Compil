@@ -4,6 +4,7 @@ NUM : age
 REAL : salaire
 FIXE NUM : MAX_AGE = 65
 EXECUTION {
+--EXECUTION ##
 affiche("Entrez votre âge :")
 lire(age)
 SI (age < MAX_AGE) ALORS {
