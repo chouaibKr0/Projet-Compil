@@ -9,15 +9,56 @@ int nbLigne = 0;
 
 %%
 
-DEBUT           { return mc_debut; }
-EXECUTION       { return mc_execution; }
+DEBUT           { return debut; }
+EXECUTION       { return execution; }
 "{"             { return start_block; }
 "}"             { return end_block; }
-FIN             { return mc_fin; }
+FIN             { return fin; }
 
 [ \t]           { /* Ignore white space */ }
 [\n]            { nbLigne++; }
-"{"-.*"-}"              { /* Ignore multi-line comments */ }
 "--".*?"##"             { /* Ignore single-line comments */ }
+"REAL"                  { return t_real; }
+"TEXT"                  { return t_text; }
+-?[0-9]+                  { 
+                            int num = atoi(yytext);  // Convert the matched string to an integer
+                            if (num > -32768 && num < 32767) {
+                                return num;
+                            } else {
+                                printf("Error: Number out of range: %d\n", num);
+                            }
+                        }
+[+\-]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)
+                        { return real}
+\"[^\"]*\"              { return text; }
+"["                     { return l_brackrt; }
+"]"                     { return r_brackrt; } 
+":"                     {return deuxp; }
+";"                     {return pvg; }
+"FIXE"                  {return fixe; }
+"="                     {return egal; }
+"<-"                    {return affecter; }
+"SI"                      {return si; }
+"("                      {return l_parenthesis; }
+")"                      {return r_parenthesis; }
+"ALORS"                      {return alors; }
+"SINON"                      {return sinon; }
+"TANTQUE"                      {return tantque; }
+"FAIRE"                      {return faire; }
+"+"                      {return add; }
+"-"                      {return sub; }
+"*"                      {return mul; }
+"/"                      {return div; }
+"ET"                      {return et; }
+"OU"                      {return ou; }
+"NON"                      {return non; }
+"!="                      {return inegal; }
+"<"                      {return int; }
+"<="                      {return inf_egal; }
+">"                      {return sup; }
+">="                      {return sup_egal; }
+"affiche"                      {return affeche; }
+"lire"                      {return lire; }
+[a-zA-Z_][a-zA-Z0-9_]{0,9}        {return idf;}
 .               { printf("Erreur lexical %d: %s\n", nbLigne, yytext); }
 

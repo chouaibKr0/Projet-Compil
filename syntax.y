@@ -3,12 +3,12 @@
     #include <stdlib.h>
 %}
 
-%token mc_debut mc_execution start_block end_block mc_fin
+%token debut execution start_block end_block fin 
 
 %%
 
 S: 
-    mc_debut P_DECLARATION mc_execution start_block P_INSTRUCTION end_block mc_fin 
+    debut P_DECLARATION execution start_block P_INSTRUCTION end_block fin 
     {
         printf("Syntax correct!\n");
         YYACCEPT;
@@ -17,12 +17,17 @@ S:
 ;
 
 P_DECLARATION:
-    /* empty */
+    DECLARATION pvg P_DECLARATION | /* empty */
+    ;
+
+DECLARATION:
+
     ;
 
 P_INSTRUCTION:
-    /* empty */
+    INSTRUCTION pvg P_INSTRUCTION|  /* empty */
     ;
+
 
 %%
 
