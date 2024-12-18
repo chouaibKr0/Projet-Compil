@@ -28,6 +28,10 @@ P_INSTRUCTION:
     INSTRUCTION pvg P_INSTRUCTION|  /* empty */
     ;
 
+INSTRUCTION:
+
+;
+
 %%
 
 int yyerror(const char *s) {
