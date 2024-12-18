@@ -903,7 +903,7 @@ YY_RULE_SETUP
 case 42:
 YY_RULE_SETUP
 #line 62 "lexical.l"
-{return lire; }
+{return lirre; }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP

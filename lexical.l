@@ -22,14 +22,7 @@ NUM                   { return t_num;}
 REAL                  { return t_real; }
 TEXT                  { return t_text; }
 [+\-]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)                        { return real;}
--?[0-9]+                  { /*
-                            int num = atoi(yytext);  // Convert the matched string to an integer
-                            if (num > -32768 && num < 32767) {
-                                return num;
-                            } else {
-                                printf("Error: Number out of range: %d\n", num);
-                            }*/
-                            return num;
+-?[0-9]+                  { return num;
                         }
 \"[^\"]*\"              { return text; }
 "["                     { return l_brackrt; }
@@ -49,7 +42,7 @@ FAIRE                      {return faire; }
 "+"                      {return add; }
 "-"                      {return sub; }
 "*"                      {return mul; }
-"/"                      {return div; }
+"/"                      {return mydev; }
 ET                      {return et; }
 OU                      {return ou; }
 NON                      {return non; }
