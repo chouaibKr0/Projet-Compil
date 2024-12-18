@@ -3,7 +3,7 @@
     #include <stdlib.h>
 %}
 
-%token debut execution start_block end_block fin t_real t_text t_num num real text l_brackrt r_brackrt deuxp pvg fixe egal affecter si l_parenthesis r_parenthesis alors sinon tantque faire add sub mul div et ou non inegal inf inf_egal sup sup_egal affeche lire idf
+%token debut execution start_block end_block fin t_real t_text t_num num real text l_brackrt r_brackrt deuxp pvg fixe egal affecter si l_parenthesis r_parenthesis alors sinon tantque faire add sub mul div et ou non inegal inf inf_egal sup sup_egal affeche lire idf faux vrai
 
 %%
 
@@ -84,8 +84,8 @@ OPA:
     div
     ;
 EXPRL:
-    0|
-    1|
+    faux|
+    vrai|
     EXPRL OPL EXPRL
     ;
 OPL:
