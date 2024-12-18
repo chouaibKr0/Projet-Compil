@@ -135,7 +135,7 @@ enum yysymbol_kind_t
   YYSYMBOL_ou = 32,                        /* ou  */
   YYSYMBOL_non = 33,                       /* non  */
   YYSYMBOL_inegal = 34,                    /* inegal  */
-  YYSYMBOL_int = 35,                       /* int  */
+  YYSYMBOL_inf = 35,                       /* inf  */
   YYSYMBOL_inf_egal = 36,                  /* inf_egal  */
   YYSYMBOL_sup = 37,                       /* sup  */
   YYSYMBOL_sup_egal = 38,                  /* sup_egal  */
@@ -558,7 +558,7 @@ static const char *const yytname[] =
   "text", "l_brackrt", "r_brackrt", "deuxp", "pvg", "fixe", "egal",
   "affecter", "si", "l_parenthesis", "r_parenthesis", "alors", "sinon",
   "tantque", "faire", "add", "sub", "mul", "div", "et", "ou", "non",
-  "inegal", "int", "inf_egal", "sup", "sup_egal", "affeche", "lire", "idf",
+  "inegal", "inf", "inf_egal", "sup", "sup_egal", "affeche", "lire", "idf",
   "$accept", "Program", "P_DECLARATION", "DECLARATION", "P_INSTRUCTION",
   "INSTRUCTION", YY_NULLPTR
 };

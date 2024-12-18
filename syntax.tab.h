@@ -86,7 +86,7 @@ extern int yydebug;
     ou = 287,                      /* ou  */
     non = 288,                     /* non  */
     inegal = 289,                  /* inegal  */
-    int = 290,                     /* int  */
+    inf = 290,                     /* inf  */
     inf_egal = 291,                /* inf_egal  */
     sup = 292,                     /* sup  */
     sup_egal = 293,                /* sup_egal  */
