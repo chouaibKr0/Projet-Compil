@@ -82,7 +82,7 @@ extern int yydebug;
     add = 283,                     /* add  */
     sub = 284,                     /* sub  */
     mul = 285,                     /* mul  */
-    div = 286,                     /* div  */
+    mydev = 286,                   /* mydev  */
     et = 287,                      /* et  */
     ou = 288,                      /* ou  */
     non = 289,                     /* non  */
