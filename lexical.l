@@ -20,13 +20,3 @@ FIN             { return mc_fin; }
 
 .               { printf("Erreur lexical %d: %s\n", nbLigne, yytext); }
 
-%%
-
-int main() {
-    yylex();
-    return 0;
-}
-
-int yywrap() {
-    return 1;
-}
