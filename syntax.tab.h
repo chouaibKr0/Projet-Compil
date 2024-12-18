@@ -92,7 +92,7 @@ extern int yydebug;
     sup = 293,                     /* sup  */
     sup_egal = 294,                /* sup_egal  */
     affeche = 295,                 /* affeche  */
-    lire = 296,                    /* lire  */
+    lirre = 296,                   /* lirre  */
     idf = 297,                     /* idf  */
     faux = 298,                    /* faux  */
     vrai = 299                     /* vrai  */

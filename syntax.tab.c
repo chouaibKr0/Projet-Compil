@@ -141,7 +141,7 @@ enum yysymbol_kind_t
   YYSYMBOL_sup = 38,                       /* sup  */
   YYSYMBOL_sup_egal = 39,                  /* sup_egal  */
   YYSYMBOL_affeche = 40,                   /* affeche  */
-  YYSYMBOL_lire = 41,                      /* lire  */
+  YYSYMBOL_lirre = 41,                     /* lirre  */
   YYSYMBOL_idf = 42,                       /* idf  */
   YYSYMBOL_faux = 43,                      /* faux  */
   YYSYMBOL_vrai = 44,                      /* vrai  */
@@ -580,11 +580,11 @@ static const char *const yytname[] =
   "real", "text", "l_brackrt", "r_brackrt", "deuxp", "pvg", "fixe", "egal",
   "affecter", "si", "l_parenthesis", "r_parenthesis", "alors", "sinon",
   "tantque", "faire", "add", "sub", "mul", "div", "et", "ou", "non",
-  "inegal", "inf", "inf_egal", "sup", "sup_egal", "affeche", "lire", "idf",
-  "faux", "vrai", "$accept", "Program", "P_DECLARATION", "DECLARATION",
-  "Val", "TYPE", "P_INSTRUCTION", "INSTRUCTION", "AFFECTASION", "IF",
-  "CONDITION", "BOUCLE", "ENTREE", "SORTIE", "EXPR", "OPA", "EXPRL", "OPL",
-  "COMPARAISION", "OPC", YY_NULLPTR
+  "inegal", "inf", "inf_egal", "sup", "sup_egal", "affeche", "lirre",
+  "idf", "faux", "vrai", "$accept", "Program", "P_DECLARATION",
+  "DECLARATION", "Val", "TYPE", "P_INSTRUCTION", "INSTRUCTION",
+  "AFFECTASION", "IF", "CONDITION", "BOUCLE", "ENTREE", "SORTIE", "EXPR",
+  "OPA", "EXPRL", "OPL", "COMPARAISION", "OPC", YY_NULLPTR
 };
 
 static const char *
