@@ -13,6 +13,7 @@ S:
         printf("Syntax correct!\n");
         YYACCEPT;
     }
+    
 ;
 
 P_DECLARATION:
