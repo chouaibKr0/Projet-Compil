@@ -321,7 +321,6 @@ void yyfree ( void *  );
 	}
 #define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
 
-/* Begin user sect3 */
 typedef flex_uint8_t YY_CHAR;
 
 FILE *yyin = NULL, *yyout = NULL;
@@ -459,8 +458,8 @@ char *yytext;
 
 int nbLigne = 0;
 
+#line 462 "lex.yy.c"
 #line 463 "lex.yy.c"
-#line 464 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -680,7 +679,7 @@ YY_DECL
 #line 10 "lexical.l"
 
 
-#line 684 "lex.yy.c"
+#line 683 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -783,7 +782,7 @@ YY_RULE_SETUP
 #line 23 "lexical.l"
 ECHO;
 	YY_BREAK
-#line 787 "lex.yy.c"
+#line 786 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1789,14 +1788,3 @@ void yyfree (void * ptr )
 #define YYTABLES_NAME "yytables"
 
 #line 23 "lexical.l"
-
-
-int main() {
-    yylex();
-    return 0;
-}
-
-int yywrap() {
-    return 1;
-}
-
