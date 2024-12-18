@@ -65,7 +65,7 @@ BOUCLE:
     ;
 
 ENTREE:
-    lire l_parenthesis idf r_parenthesis
+    lirre l_parenthesis idf r_parenthesis
     ;
 
 SORTIE:
