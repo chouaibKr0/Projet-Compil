@@ -1,0 +1,4 @@
+DEBUT
+EXECUTION {
+}
+FIN;
