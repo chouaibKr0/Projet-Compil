@@ -1400,9 +1400,7 @@ int yyerror(const char *s) {
     return 1;
 }
 
-int main(void) {
-    return yyparse();
-}
+
 
 int yywrap() {
     return 1;
