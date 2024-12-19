@@ -10,9 +10,7 @@
         char CodeEntite[20];
     } TypeTS;
 
-    //initiation d'
-
-    un tableau qui va contenir les elements de la table de symbole
+    //initiation d'un tableau qui va contenir les elements de la table de symbole
 
     TypeTS ts[100];
 
