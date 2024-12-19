@@ -71,8 +71,71 @@
 
     #include <stdio.h>
     #include <stdlib.h>
+    int nbLigne = 1;
 
-#line 76 "syntax.tab.c"
+    //structure de la table de symbole
+    typedef struct
+    {
+        char NomEntite[20];
+        char CodeEntite[20];
+    } TypeTS;
+
+    //initiation d'
+
+    un tableau qui va contenir les elements de la table de symbole
+
+    TypeTS ts[100];
+
+    // un compteur global pour la table de symbole
+    int CpTabSym=0;
+    //la fonction recherche: cherche est ce que l'entité existe ou non dans la
+    table de symbole.
+    // renvoi:
+
+    // sa position i: si l'entite existe déjà dans la table de symbole
+    // -1: si l'entité n'existe pas dans la table de symbole.
+
+    int recherche(char entite[])
+    {
+        int i=0;
+        while(i<CpTabSym){
+        if (strcmp(entite,ts[i].NomEntite)==0) return i;
+        i++;
+        }
+        return -1;
+    }
+    //une fontion qui va insérer les entités de programme dans la table de
+    symbole
+
+    void inserer(char entite[], char code[])
+    {
+
+        if ( recherche(entite)==-1)
+        {
+            strcpy(ts[CpTabSym].NomEntite,entite);
+            strcpy(ts[CpTabSym].CodeEntite,code);
+            CpTabSym++;
+        }
+    }
+    //une fonction pour afficher la table de symbole
+    void afficher ()
+    {
+        printf("\n/***************Table des symboles ******************/\n");
+        printf("________________________\n");
+        printf("\t| NomEntite | CodeEntite \n");
+        printf("________________________\n");
+        int i=0;
+        while(i<CpTabSym)
+        {
+            printf("\t|%10s |%12s |\n"
+
+            ,ts[i].NomEntite,ts[i].CodeEntite);
+
+            i++;
+        }
+    }
+
+#line 139 "syntax.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -552,14 +615,14 @@ static const yytype_int8 yytranslate[] =
 
 #if YYDEBUG
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
-static const yytype_int8 yyrline[] =
+static const yytype_uint8 yyrline[] =
 {
-       0,    11,    11,    23,    23,    27,    28,    29,    32,    33,
-      34,    37,    38,    39,    43,    43,    47,    47,    47,    47,
-      47,    52,    56,    60,    61,    64,    68,    72,    76,    77,
-      78,    81,    82,    83,    84,    87,    88,    89,    92,    93,
-      94,    97,    98,    99,   100,   104,   105,   106,   107,   108,
-     109
+       0,    80,    80,    92,    92,    96,    97,    98,   101,   102,
+     103,   106,   107,   108,   112,   112,   116,   116,   116,   116,
+     116,   121,   125,   129,   130,   133,   137,   141,   145,   146,
+     147,   150,   151,   152,   153,   156,   157,   158,   161,   162,
+     163,   166,   167,   168,   169,   173,   174,   175,   176,   177,
+     178
 };
 #endif
 
@@ -1188,16 +1251,16 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* Program: debut P_DECLARATION execution start_block P_INSTRUCTION end_block fin  */
-#line 12 "syntax.y"
+#line 81 "syntax.y"
     {
         printf("Syntax correct!\n");
         YYACCEPT;
     }
-#line 1197 "syntax.tab.c"
+#line 1260 "syntax.tab.c"
     break;
 
 
-#line 1201 "syntax.tab.c"
+#line 1264 "syntax.tab.c"
 
       default: break;
     }
@@ -1390,7 +1453,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 112 "syntax.y"
+#line 181 "syntax.y"
 
 
 int yyerror(const char *s) {
