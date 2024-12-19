@@ -3,7 +3,7 @@
 #include "syntax.tab.h"
 #include <stdio.h>
 
-int nbLigne = 0;
+extern nbLigne;
 
 %}
 
