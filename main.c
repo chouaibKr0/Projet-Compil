@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "symtab.h"
+#include "syntax.tab.c"
 
 // Global symbol table
 SymbolTable *symtab;
