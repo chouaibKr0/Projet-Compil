@@ -80,9 +80,7 @@
         char CodeEntite[20];
     } TypeTS;
 
-    //initiation d'
-
-    un tableau qui va contenir les elements de la table de symbole
+    //initiation d'un tableau qui va contenir les elements de la table de symbole
 
     TypeTS ts[100];
 
@@ -135,7 +133,7 @@
         }
     }
 
-#line 139 "syntax.tab.c"
+#line 137 "syntax.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -617,12 +615,12 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    80,    80,    92,    92,    96,    97,    98,   101,   102,
-     103,   106,   107,   108,   112,   112,   116,   116,   116,   116,
-     116,   121,   125,   129,   130,   133,   137,   141,   145,   146,
-     147,   150,   151,   152,   153,   156,   157,   158,   161,   162,
-     163,   166,   167,   168,   169,   173,   174,   175,   176,   177,
-     178
+       0,    78,    78,    90,    90,    94,    95,    96,    99,   100,
+     101,   104,   105,   106,   110,   110,   114,   114,   114,   114,
+     114,   119,   123,   127,   128,   131,   135,   139,   143,   144,
+     145,   148,   149,   150,   151,   154,   155,   156,   159,   160,
+     161,   164,   165,   166,   167,   171,   172,   173,   174,   175,
+     176
 };
 #endif
 
@@ -1251,16 +1249,16 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* Program: debut P_DECLARATION execution start_block P_INSTRUCTION end_block fin  */
-#line 81 "syntax.y"
+#line 79 "syntax.y"
     {
         printf("Syntax correct!\n");
         YYACCEPT;
     }
-#line 1260 "syntax.tab.c"
+#line 1258 "syntax.tab.c"
     break;
 
 
-#line 1264 "syntax.tab.c"
+#line 1262 "syntax.tab.c"
 
       default: break;
     }
@@ -1453,7 +1451,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 181 "syntax.y"
+#line 179 "syntax.y"
 
 
 int yyerror(const char *s) {
