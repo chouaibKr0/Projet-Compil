@@ -71,8 +71,10 @@
 
     #include <stdio.h>
     #include <stdlib.h>
+    int nbLigne = 1;
+    extern SymbolTable *symtab;
 
-#line 76 "syntax.tab.c"
+#line 78 "syntax.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -554,12 +556,12 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int8 yyrline[] =
 {
-       0,    11,    11,    23,    23,    27,    28,    29,    32,    33,
-      34,    37,    38,    39,    43,    43,    47,    47,    47,    47,
-      47,    52,    56,    60,    61,    64,    68,    72,    76,    77,
-      78,    81,    82,    83,    84,    87,    88,    89,    92,    93,
-      94,    97,    98,    99,   100,   104,   105,   106,   107,   108,
-     109
+       0,    13,    13,    25,    25,    29,    30,    31,    34,    35,
+      36,    39,    40,    41,    45,    45,    49,    49,    49,    49,
+      49,    54,    58,    62,    63,    66,    70,    74,    78,    79,
+      80,    83,    84,    85,    86,    89,    90,    91,    94,    95,
+      96,    99,   100,   101,   102,   106,   107,   108,   109,   110,
+     111
 };
 #endif
 
@@ -1188,16 +1190,16 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* Program: debut P_DECLARATION execution start_block P_INSTRUCTION end_block fin  */
-#line 12 "syntax.y"
+#line 14 "syntax.y"
     {
         printf("Syntax correct!\n");
         YYACCEPT;
     }
-#line 1197 "syntax.tab.c"
+#line 1199 "syntax.tab.c"
     break;
 
 
-#line 1201 "syntax.tab.c"
+#line 1203 "syntax.tab.c"
 
       default: break;
     }
@@ -1390,7 +1392,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 112 "syntax.y"
+#line 114 "syntax.y"
 
 
 int yyerror(const char *s) {
