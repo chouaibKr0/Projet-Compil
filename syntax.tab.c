@@ -1449,6 +1449,7 @@ int yyerror(const char *s) {
 }
 
 int main(void) {
+    afficher ();
     return yyparse();
 }
 
