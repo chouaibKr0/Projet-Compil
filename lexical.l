@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 extern nbLigne;
-
+extern YYSTYPE yylval;
 %}
 
 %%
@@ -21,10 +21,9 @@ FIN             { return fin; }
 NUM                   { return t_num;}
 REAL                  { return t_real; }
 TEXT                  { return t_text; }
-[+\-]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)                        { return real;}
--?[0-9]+                  { return num;
-                        }
-\"[^\"]*\"              { return text; }
+[+\-]?([0-9]+\.[0-9]*|[0-9]*\.[0-9]+)                        {yylval.flotant=atoi(yytext); return real;}
+-?[0-9]+                  { yylval.entier=atoi(yytext); return num; }
+\"[^\"]*\"              { yylval.str=atoi(yytext); return text; }
 "["                     { return l_brackrt; }
 "]"                     { return r_brackrt; } 
 ":"                     {return deuxp; }
@@ -53,6 +52,6 @@ NON                      {return non; }
 ">="                      {return sup_egal; }
 affiche                      {return affeche; }
 lire                      {return lirre; }
-[a-zA-Z_][a-zA-Z0-9_]{0,9}        {return idf;}
+[a-zA-Z_][a-zA-Z0-9_]{0,9}        { yylval.str=atoi(yytext); inserer(yytext,"idf"); return idf;}
 .               { printf("Erreur lexical %d: %s\n", nbLigne, yytext); }
 
