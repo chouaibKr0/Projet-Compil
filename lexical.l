@@ -4,8 +4,11 @@
 #include <stdio.h>
 
 extern nbLigne;
+extern SymbolTable *symtab;
 
 %}
+
+%option noyywrap
 
 %%
 
@@ -56,3 +59,4 @@ lire                      {return lirre; }
 [a-zA-Z_][a-zA-Z0-9_]{0,9}        {return idf;}
 .               { printf("Erreur lexical %d: %s\n", nbLigne, yytext); }
 
+%%
