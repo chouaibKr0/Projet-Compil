@@ -3,25 +3,17 @@
     #include <stdlib.h>
     int nbLigne = 1;
 
-    //structure de la table de symbole
     typedef struct
     {
         char NomEntite[20];
         char CodeEntite[20];
     } TypeTS;
 
-    //initiation d'un tableau qui va contenir les elements de la table de symbole
 
     TypeTS ts[100];
 
-    // un compteur global pour la table de symbole
     int CpTabSym=0;
-    //la fonction recherche: cherche est ce que l'entité existe ou non dans la
-    table de symbole.
-    // renvoi:
-
-    // sa position i: si l'entite existe déjà dans la table de symbole
-    // -1: si l'entité n'existe pas dans la table de symbole.
+    
 
     int recherche(char entite[])
     {
@@ -32,9 +24,7 @@
         }
         return -1;
     }
-    //une fontion qui va insérer les entités de programme dans la table de
-    symbole
-
+    
     void inserer(char entite[], char code[])
     {
 
@@ -45,7 +35,6 @@
             CpTabSym++;
         }
     }
-    //une fonction pour afficher la table de symbole
     void afficher ()
     {
         printf("\n/***************Table des symboles ******************/\n");
